@@ -27,9 +27,10 @@ function requestProcess() {
 export function searchData() {
   return (dispatch, getState) => {
     dispatch(requestProcess());
-    //const raceDate = getState().searchPageReducer.searchWord;
+    const raceDate = getState().searchPageReducer.searchWord;
     ref.off();
-    ref.on(
+    ref.orderByChild('Date').startAt(raceDate).endAt(raceDate)
+    .once(
       'value',
       snapshot => {
         dispatch(searchSuccess(snapshot));

@@ -3,20 +3,7 @@ import * as types from '../../types';
 const defaultState = {
   // テーブル設定
   tableTitle: 'レース結果検索',
-  tableColumns: [
-    '開催日',
-    '開催地',
-    'レース名',
-    '距離',
-    '着順',
-    '馬名',
-    '性別',
-    '年齢',
-    '馬体重',
-    'タイム',
-    '人気',
-    'オッズ',
-  ],
+  tableColumns: ['開催日', '開催地', 'レース名', '距離', '着順', '馬名', '性別', '年齢', '馬体重', 'タイム', '人気', 'オッズ'],
   tableOptions: {
     filterType: 'dropdown',
     responsive: 'stacked',
@@ -88,7 +75,7 @@ const searchPageReducer = (state = defaultState, action) => {
         let raceResult = null;
         Object.keys(action.searchedList).forEach(key => {
           raceResult = action.searchedList[key];
-          if(raceResult.Date === state.searchWord || state.searchWord === '') {
+          if (raceResult.Date === state.searchWord || state.searchWord === '') {
             raceResults.push([
               raceResult.Date,
               raceResult.Venue,
