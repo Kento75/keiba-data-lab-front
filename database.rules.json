@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "result_data": {
+      ".read": true,
+      ".write": "auth.uid === 'my-service-worker'"
+    }
+  }
+}

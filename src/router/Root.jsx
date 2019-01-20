@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { hot } from 'react-hot-loader';
 import store from '../store';
-import { Page, ResultDataPage } from '../components';
+import { TopPage, Hello } from '../components';
+import { SearchPageContainer } from '../containers';
 
 class Root extends Component {
   render() {
@@ -11,8 +12,9 @@ class Root extends Component {
       <Provider store={store}>
         <Router>
           <div>
-            <Route exact path="/" component={Page} />
-            <Route path="/resultData" component={ResultDataPage} />
+            <Route exact path="/" component={TopPage} />
+            <Route path="/hello" component={Hello} />
+            <Route path="/search" component={SearchPageContainer} />
           </div>
         </Router>
       </Provider>

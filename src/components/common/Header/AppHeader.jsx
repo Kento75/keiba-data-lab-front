@@ -10,7 +10,7 @@ import Menu, { MenuItem } from 'material-ui/Menu';
 
 const muiTheme = createMuiTheme();
 
-class Header extends React.Component {
+class AppHeader extends React.Component {
   state = {
     anchorEl: null,
   };
@@ -39,10 +39,19 @@ class Header extends React.Component {
                 </Typography>
                 <Menu id="simple-menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
                   <MenuItem>
-                    <Link to="/">TOP</Link>
+                    <Link to="/" style={{ textDecorationLine: 'none' }}>
+                      TOP
+                    </Link>
                   </MenuItem>
                   <MenuItem>
-                    <Link to="/resultData">ResultData</Link>
+                    <Link to="/hello" style={{ textDecorationLine: 'none' }}>
+                      HelloWorld
+                    </Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link to="/search" style={{ textDecorationLine: 'none' }}>
+                      検索画面
+                    </Link>
                   </MenuItem>
                 </Menu>
               </Toolbar>
@@ -54,4 +63,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default AppHeader;
