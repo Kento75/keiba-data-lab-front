@@ -70,6 +70,7 @@ const searchPageReducer = (state = defaultState, action) => {
       };
     // 検索正常終了時
     case types.SUCCESS_SEARCH:
+      console.log(action.searchedList)
       let raceResults = [];
       if (action.searchedList) {
         let raceResult = null;

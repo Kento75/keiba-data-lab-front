@@ -29,16 +29,19 @@ export function searchData() {
     dispatch(requestProcess());
     const raceDate = getState().searchPageReducer.searchWord;
     ref.off();
-    ref.orderByChild('Date').startAt(raceDate).endAt(raceDate)
-    .once(
-      'value',
-      snapshot => {
-        dispatch(searchSuccess(snapshot));
-      },
-      error => {
-        dispatch(searchError(error));
-      }
-    );
+    ref
+      .orderByChild('Date')
+      .startAt(raceDate)
+      .endAt(raceDate)
+      .once(
+        'value',
+        snapshot => {
+          dispatch(searchSuccess(snapshot));
+        },
+        error => {
+          dispatch(searchError(error));
+        }
+      );
   };
 }
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import AppHeader from './common/Header/AppHeader';
+import { AppHeader } from '../../components';
 
-class HelloWorld extends Component {
+class HelloPage extends Component {
   render() {
     return (
       <div>
@@ -14,4 +14,4 @@ class HelloWorld extends Component {
   }
 }
 
-export default HelloWorld;
+export default HelloPage;

@@ -9,7 +9,7 @@ import { AppHeader, TextBox, LoadingDialog, ResultDialog } from '../../component
 /** Actions */
 import * as searchPageAction from '../../actions/SearchPage/searchPageAction';
 
-class SearchPageContainer extends Component {
+class SearchPage extends Component {
   constructor(props) {
     super(props);
     /** ActionBinds */
@@ -87,7 +87,7 @@ class SearchPageContainer extends Component {
   }
 }
 
-SearchPageContainer.propTypes = {
+SearchPage.propTypes = {
   tableTitle: PropTypes.string.isRequired,
   tableColumns: PropTypes.array.isRequired,
   tableOptions: PropTypes.object.isRequired,
@@ -139,4 +139,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchPageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);

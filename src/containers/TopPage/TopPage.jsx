@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import AppHeader from './common/Header/AppHeader';
+import { AppHeader } from '../../components';
 
 class TopPage extends Component {
   render() {

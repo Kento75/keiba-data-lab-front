@@ -1,3 +1,6 @@
-import SearchPageContainer from './SearchPage/SearchPageContainer';
+import TopPage from './TopPage/TopPage';
+import HelloPage from './HelloPage/HelloPage';
+import SearchPage from './SearchPage/SearchPage';
 
-export { SearchPageContainer };
+
+export { TopPage, HelloPage, SearchPage };
